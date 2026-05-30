@@ -1,0 +1,51 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.seccion-hero {
+  position: relative;
+  height: 31.25rem;
+  overflow: hidden;
+
+  &__imagen-fondo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__superposicion {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    display: flex;
+    align-items: center;
+  }
+
+  &__contenedor {
+    @include contenedor;
+    width: 100%;
+  }
+
+  &__texto {
+    max-width: 42rem;
+    color: $color-fondo;
+  }
+
+  &__titulo {
+    font-size: 2.5rem;
+    font-weight: $peso-bold;
+    margin-bottom: $espaciado-md;
+    line-height: 1.2;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 3rem;
+    }
+  }
+
+  &__descripcion {
+    font-size: 1.25rem;
+    margin-bottom: $espaciado-lg;
+    line-height: 1.5;
+  }
+}
