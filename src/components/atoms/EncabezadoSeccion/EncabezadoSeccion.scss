@@ -1,0 +1,14 @@
+@use '../../../styles/mixins' as *;
+
+.encabezado-seccion {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  &__titulo {
+    @include titulo-seccion;
+  }
+
+  &__descripcion {
+    @include subtitulo-seccion;
+  }
+}

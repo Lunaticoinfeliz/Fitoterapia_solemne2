@@ -1,0 +1,19 @@
+.imagen-respaldo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  &--error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e5e7eb;
+    min-height: 12rem;
+  }
+
+  &__texto {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+}

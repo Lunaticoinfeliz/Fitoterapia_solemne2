@@ -1,0 +1,22 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.seccion-eventos {
+  padding: $espaciado-3xl 0;
+  background-color: $color-fondo;
+
+  &__contenedor {
+    @include contenedor;
+  }
+
+  &__rejilla {
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-xl;
+  }
+
+  &__acciones {
+    margin-top: $espaciado-2xl;
+    text-align: center;
+  }
+}

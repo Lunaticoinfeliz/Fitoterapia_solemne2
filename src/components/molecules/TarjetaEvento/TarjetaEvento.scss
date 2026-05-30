@@ -1,0 +1,64 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.tarjeta-evento {
+  @include tarjeta-base;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-borde;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+  }
+
+  &__imagen-contenedor {
+    flex: 0 0 auto;
+    min-height: 12rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 33.333%;
+      min-height: 100%;
+    }
+  }
+
+  &__cuerpo {
+    padding: $espaciado-lg;
+    flex: 1;
+  }
+
+  &__titulo {
+    font-size: 1.25rem;
+    font-weight: $peso-bold;
+    color: $color-secundario;
+    margin-bottom: $espaciado-sm;
+  }
+
+  &__descripcion {
+    color: $color-texto;
+    margin-bottom: $espaciado-md;
+    line-height: 1.5;
+  }
+
+  &__metadatos {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-sm;
+    margin-bottom: $espaciado-md;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: $espaciado-sm;
+      font-size: 0.875rem;
+      color: $color-texto;
+    }
+  }
+
+  &__icono {
+    width: 1rem;
+    height: 1rem;
+    color: $color-primario;
+    flex-shrink: 0;
+  }
+}

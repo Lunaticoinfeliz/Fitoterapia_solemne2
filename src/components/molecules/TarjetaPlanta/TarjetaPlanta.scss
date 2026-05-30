@@ -1,0 +1,47 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.tarjeta-planta {
+  @include tarjeta-base;
+
+  &__imagen-contenedor {
+    height: 16rem;
+    overflow: hidden;
+  }
+
+  &__imagen {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover &__imagen {
+    transform: scale(1.05);
+  }
+
+  &__cuerpo {
+    padding: $espaciado-lg;
+  }
+
+  &__nombre {
+    font-size: 1.5rem;
+    font-weight: $peso-bold;
+    color: $color-secundario;
+    margin-bottom: $espaciado-md;
+  }
+
+  &__detalle {
+    margin-bottom: $espaciado-sm;
+
+    p {
+      color: $color-texto;
+      line-height: 1.5;
+    }
+  }
+
+  &__etiqueta {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: $peso-semibold;
+    color: $color-primario;
+    margin-bottom: $espaciado-xs;
+  }
+}

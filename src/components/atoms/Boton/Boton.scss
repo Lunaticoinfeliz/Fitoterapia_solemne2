@@ -1,0 +1,22 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.boton {
+  @include boton-primario;
+
+  &--secundario {
+    background-color: transparent;
+    color: $color-primario;
+    border: 2px solid $color-primario;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-primario-claro;
+    }
+  }
+
+  &--ancho-completo {
+    width: 100%;
+    text-align: center;
+  }
+}

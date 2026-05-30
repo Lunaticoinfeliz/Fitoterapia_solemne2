@@ -1,0 +1,38 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.seccion-plantas {
+  padding: $espaciado-3xl 0;
+  background-color: $color-fondo;
+
+  &__contenedor {
+    @include contenedor;
+  }
+
+  &__rejilla {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $espaciado-xl;
+    justify-content: center;
+
+    > * {
+      flex: 1 1 100%;
+      max-width: 100%;
+
+      @media (min-width: $breakpoint-tablet) {
+        flex: 1 1 calc(50% - #{$espaciado-xl});
+        max-width: calc(50% - #{$espaciado-xl});
+      }
+
+      @media (min-width: $breakpoint-escritorio) {
+        flex: 1 1 calc(33.333% - #{$espaciado-xl});
+        max-width: calc(33.333% - #{$espaciado-xl});
+      }
+    }
+  }
+
+  &__acciones {
+    margin-top: $espaciado-2xl;
+    text-align: center;
+  }
+}

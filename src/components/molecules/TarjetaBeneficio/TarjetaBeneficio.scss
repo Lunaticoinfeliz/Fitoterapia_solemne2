@@ -1,0 +1,36 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.tarjeta-beneficio {
+  @include tarjeta-base;
+  padding: $espaciado-lg;
+
+  &__icono-contenedor {
+    width: 3rem;
+    height: 3rem;
+    background-color: $color-primario-claro;
+    border-radius: $radio-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $espaciado-md;
+  }
+
+  &__icono {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: $color-primario;
+  }
+
+  &__titulo {
+    font-size: 1.25rem;
+    font-weight: $peso-semibold;
+    color: $color-secundario;
+    margin-bottom: $espaciado-sm;
+  }
+
+  &__descripcion {
+    color: $color-texto;
+    line-height: 1.6;
+  }
+}

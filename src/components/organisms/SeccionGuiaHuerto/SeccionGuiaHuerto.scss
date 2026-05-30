@@ -1,0 +1,33 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.seccion-guia {
+  padding: $espaciado-3xl 0;
+  background-color: $color-fondo-suave;
+
+  &__contenedor {
+    @include contenedor;
+  }
+
+  &__rejilla {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $espaciado-xl;
+    justify-content: center;
+
+    > * {
+      flex: 1 1 100%;
+      max-width: 100%;
+
+      @media (min-width: $breakpoint-tablet) {
+        flex: 1 1 calc(50% - #{$espaciado-xl});
+        max-width: calc(50% - #{$espaciado-xl});
+      }
+
+      @media (min-width: $breakpoint-escritorio) {
+        flex: 1 1 calc(25% - #{$espaciado-xl});
+        max-width: calc(25% - #{$espaciado-xl});
+      }
+    }
+  }
+}
