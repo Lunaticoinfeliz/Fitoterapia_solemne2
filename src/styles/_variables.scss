@@ -1,0 +1,52 @@
+// Colores
+$color-primario: #16a34a;
+$color-primario-oscuro: #15803d;
+$color-primario-claro: #dcfce7;
+$color-secundario: #111827;
+$color-texto: #374151;
+$color-texto-claro: #6b7280;
+$color-fondo: #ffffff;
+$color-fondo-suave: #f9fafb;
+$color-borde: #e5e7eb;
+$color-pie-fondo: #111827;
+$color-pie-texto: #9ca3af;
+$color-pie-acento: #4ade80;
+
+// Tipografía
+$fuente-base: 'Segoe UI', system-ui, -apple-system, sans-serif;
+$tamano-fuente-base: 16px;
+$peso-normal: 400;
+$peso-medio: 500;
+$peso-semibold: 600;
+$peso-bold: 700;
+
+// Espaciados
+$espaciado-xs: 0.25rem;
+$espaciado-sm: 0.5rem;
+$espaciado-md: 1rem;
+$espaciado-lg: 1.5rem;
+$espaciado-xl: 2rem;
+$espaciado-2xl: 3rem;
+$espaciado-3xl: 4rem;
+
+// Contenedor
+$ancho-maximo-contenedor: 80rem;
+
+// Bordes
+$radio-sm: 0.5rem;
+$radio-md: 0.75rem;
+$radio-lg: 1rem;
+$radio-xl: 1.5rem;
+
+// Breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-escritorio: 1024px;
+
+// Sombras
+$sombra-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$sombra-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+$sombra-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+$sombra-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+// Transiciones
+$transicion-rapida: 0.2s ease;

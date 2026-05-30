@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+.layout-principal {
+  display: grid;
+  grid-template-areas:
+    'cabecera'
+    'contenido'
+    'pie';
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+
+  &__cabecera {
+    grid-area: cabecera;
+  }
+
+  &__contenido {
+    grid-area: contenido;
+  }
+
+  &__pie {
+    grid-area: pie;
+  }
+
+  &__placeholder {
+    text-align: center;
+    padding: $espaciado-3xl;
+    color: $color-texto-claro;
+  }
+}

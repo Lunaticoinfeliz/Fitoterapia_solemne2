@@ -1,0 +1,62 @@
+@use 'variables' as *;
+
+@mixin contenedor {
+  max-width: $ancho-maximo-contenedor;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $espaciado-md;
+  padding-right: $espaciado-md;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-left: $espaciado-lg;
+    padding-right: $espaciado-lg;
+  }
+}
+
+@mixin boton-primario {
+  display: inline-block;
+  background-color: $color-primario;
+  color: $color-fondo;
+  padding: $espaciado-sm $espaciado-xl;
+  border: none;
+  border-radius: $radio-md;
+  font-weight: $peso-semibold;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color $transicion-rapida, box-shadow $transicion-rapida;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-primario-oscuro;
+    outline: 2px solid $color-primario;
+    outline-offset: 2px;
+  }
+}
+
+@mixin tarjeta-base {
+  background-color: $color-fondo;
+  border-radius: $radio-xl;
+  box-shadow: $sombra-md;
+  overflow: hidden;
+  transition: box-shadow $transicion-rapida;
+
+  &:hover {
+    box-shadow: $sombra-xl;
+  }
+}
+
+@mixin titulo-seccion {
+  font-size: 2.25rem;
+  font-weight: $peso-bold;
+  color: $color-secundario;
+  margin-bottom: $espaciado-md;
+}
+
+@mixin subtitulo-seccion {
+  font-size: 1.25rem;
+  color: $color-texto-claro;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
