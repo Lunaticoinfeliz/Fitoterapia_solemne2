@@ -1,0 +1,35 @@
+@use '../../../styles/variables' as *;
+
+.item-paso {
+  display: flex;
+  gap: $espaciado-md;
+
+  &__icono-contenedor {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color: $color-primario;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icono {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: $color-fondo;
+  }
+
+  &__titulo {
+    font-size: 1.25rem;
+    font-weight: $peso-semibold;
+    color: $color-secundario;
+    margin-bottom: $espaciado-sm;
+  }
+
+  &__descripcion {
+    color: $color-texto;
+    line-height: 1.6;
+  }
+}

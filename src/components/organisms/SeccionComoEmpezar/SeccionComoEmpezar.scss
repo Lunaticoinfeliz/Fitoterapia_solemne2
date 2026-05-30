@@ -1,0 +1,73 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.seccion-como-empezar {
+  padding: $espaciado-3xl 0;
+  background: linear-gradient(to bottom, #f0fdf4, $color-fondo);
+
+  &__contenedor {
+    @include contenedor;
+  }
+
+  &__rejilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $espaciado-2xl;
+    align-items: center;
+
+    @media (min-width: $breakpoint-escritorio) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__titulo {
+    @include titulo-seccion;
+    text-align: left;
+    margin-bottom: $espaciado-lg;
+  }
+
+  &__intro {
+    font-size: 1.125rem;
+    color: $color-texto;
+    margin-bottom: $espaciado-xl;
+    line-height: 1.6;
+  }
+
+  &__pasos {
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-lg;
+  }
+
+  &__visual {
+    position: relative;
+  }
+
+  &__imagen-contenedor {
+    border-radius: $radio-xl;
+    overflow: hidden;
+    box-shadow: $sombra-xl;
+  }
+
+  &__cita {
+    position: relative;
+    margin-top: -$espaciado-xl;
+    margin-left: auto;
+    max-width: 18rem;
+    background-color: $color-primario;
+    color: $color-fondo;
+    padding: $espaciado-lg;
+    border-radius: $radio-lg;
+    box-shadow: $sombra-lg;
+    font-weight: $peso-semibold;
+    font-size: 1.05rem;
+    line-height: 1.4;
+
+    @media (min-width: $breakpoint-escritorio) {
+      position: absolute;
+      right: -1.5rem;
+      bottom: -1.5rem;
+      margin-top: 0;
+    }
+  }
+}
