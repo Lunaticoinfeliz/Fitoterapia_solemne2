@@ -33,10 +33,10 @@ function BarraNavegacion() {
               </li>
             ))}
             <li className="barra-navegacion__item">
-              <a href="#admin" className="barra-navegacion__boton-admin">
+              <Link to="/admin/login" className="barra-navegacion__boton-admin">
                 <User className="barra-navegacion__boton-icono" aria-hidden="true" />
                 Admin
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
