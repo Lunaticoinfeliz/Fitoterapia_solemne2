@@ -5,7 +5,7 @@ import Boton from '../../atoms/Boton/Boton.jsx';
 import { plantas as plantasIniciales } from '../../../datos/plantas.js';
 import './SeccionPlantas.scss';
 
-const PLANTAS_INICIALES = 3; // cuántas mostrar al inicio
+const PLANTAS_INICIALES = 3;
 
 function SeccionPlantas() {
   const [plantas, setPlantas] = useState([]);
