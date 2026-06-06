@@ -218,6 +218,29 @@
     }
   }
 
+  &__boton-restaurar {
+    display: inline-flex;
+    align-items: center;
+    gap: $espaciado-sm;
+    background-color: transparent;
+    color: $color-texto-claro;
+    padding: $espaciado-sm $espaciado-md;
+    border: 1px solid $color-borde;
+    border-radius: $radio-md;
+    font-weight: $peso-semibold;
+    font-family: $fuente-base;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all $transicion-rapida;
+
+    &:hover {
+      background-color: $color-fondo-suave;
+      color: $color-texto;
+      border-color: $color-texto-claro;
+    }
+  }
+
+
   /* Forms Layout & Modern Animations */
   &__form-container {
     @include tarjeta-base;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Plus, Edit2, Trash2, LogOut, Leaf, Save, X, Calendar } from 'lucide-react';
+import { Plus, Edit2, Trash2, LogOut, Leaf, Save, X, Calendar, RotateCcw } from 'lucide-react';
 import './PanelAdmin.scss';
 import { plantas } from "../../datos/plantas.js";
 import { eventos } from "../../datos/eventos.js";
@@ -120,6 +120,13 @@ function PanelAdmin() {
     });
   };
 
+  const handleRestoreDefaultPlants = () => {
+    if (window.confirm('¿Estás seguro de que deseas restaurar las plantas por defecto? Esto reemplazará los datos actuales en el panel.')) {
+      setPlants(plantas);
+      localStorage.setItem('adminPlants', JSON.stringify(plantas));
+    }
+  };
+
   // Controladores de Evento
   const handleEventSubmit = (e) => {
     e.preventDefault();
@@ -174,6 +181,13 @@ function PanelAdmin() {
       imagen: '',
       descripcion: ''
     });
+  };
+
+  const handleRestoreDefaultEvents = () => {
+    if (window.confirm('¿Estás seguro de que deseas restaurar los eventos por defecto? Esto reemplazará los datos actuales en el panel.')) {
+      setEvents(eventos);
+      localStorage.setItem('adminEvents', JSON.stringify(eventos));
+    }
   };
 
   return (
@@ -255,13 +269,21 @@ function PanelAdmin() {
             </div>
 
             {/* Botón Agregar */}
-            <div className="panel-admin__action-bar">
+            <div className="panel-admin__action-bar" style={{ display: 'flex', gap: '10px' }}>
               <button
                 onClick={() => setShowAddPlantForm(!showAddPlantForm)}
                 className="panel-admin__boton-agregar"
               >
                 <Plus className="panel-admin__boton-agregar-icono" />
                 Agregar Nueva Planta
+              </button>
+              <button
+                onClick={handleRestoreDefaultPlants}
+                className="panel-admin__boton-restaurar"
+                type="button"
+              >
+                <RotateCcw className="panel-admin__boton-agregar-icono" />
+                Restaurar por Defecto
               </button>
             </div>
 
@@ -456,13 +478,21 @@ function PanelAdmin() {
             </div>
 
             {/* Botón Agregar */}
-            <div className="panel-admin__action-bar">
+            <div className="panel-admin__action-bar" style={{ display: 'flex', gap: '10px' }}>
               <button
                 onClick={() => setShowAddEventForm(!showAddEventForm)}
                 className="panel-admin__boton-agregar"
               >
                 <Plus className="panel-admin__boton-agregar-icono" />
                 Agregar Nuevo Evento
+              </button>
+              <button
+                onClick={handleRestoreDefaultEvents}
+                className="panel-admin__boton-restaurar"
+                type="button"
+              >
+                <RotateCcw className="panel-admin__boton-agregar-icono" />
+                Restaurar por Defecto
               </button>
             </div>
 

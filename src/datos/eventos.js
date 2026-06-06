@@ -6,8 +6,7 @@ export const eventos = [
     hora: '10:00 - 13:00',
     ubicacion: 'Centro Comunitario Verde, Santiago',
     participantes: 24,
-    imagen:
-      '../assets/taller-preparaciones.jpg',
+    imagen: '/assets/taller-preparaciones.jpg',
     descripcion:
       'Aprende a preparar infusiones, tinturas y ungüentos con plantas de tu huerto. Incluye materiales y degustación.',
   },
@@ -24,3 +23,4 @@ export const eventos = [
       'Iníciate en el cultivo de plantas terapéuticas: siembra, riego, cosecha y usos seguros en el hogar.',
   },
 ];
+
